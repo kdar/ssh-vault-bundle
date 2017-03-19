@@ -1,6 +1,6 @@
 # ssh-vault-bundle
 
-Provides a way to encrypt text and bundle it into a bash script so that the recepient can run it and immediately see the decrypted text using rsa pub/priv keys.
+Provides a way to encrypt text and bundle it into a bash script so that the recipient can run it and immediately see the decrypted text using rsa pub/priv keys.
 
 ## Getting Started
 
