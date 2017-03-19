@@ -1,0 +1,4 @@
+dist.sh
+*.key
+*.pub
+dist
