@@ -2,9 +2,17 @@
 
 rm -rf dist
 mkdir -p dist
+rm dish.sh
 
-./vendor/ssh-vault/ssh-vault -k "out.key.pub" create ./dist/payload
+set -e
+
+if [ $# -eq 0 ]; then
+  ./vendor/ssh-vault/ssh-vault create ./dist/payload
+else
+  ./vendor/ssh-vault/ssh-vault -k "$1" create ./dist/payload
+fi
+
 cp ./vendor/ssh-vault/ssh-vault ./dist
-cp run.sh /dist
+cp ./run.sh ./dist
 
-./vendor/makeself/makeself.sh ./dist dist.sh "" ./run.sh
+./vendor/makeself/makeself.sh --gzip ./dist dist.sh "" ./run.sh

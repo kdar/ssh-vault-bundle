@@ -21,7 +21,7 @@ targetdir="$archdirname"
 filesizes="$filesizes"
 keep="$KEEP"
 nooverwrite="$NOOVERWRITE"
-quiet="n"
+quiet="y"
 nodiskspace="n"
 
 print_cmd_arg=""
@@ -220,7 +220,7 @@ UnTAR()
 
 finish=true
 xterm_loop=
-noprogress=$NOPROGRESS
+noprogress="y"
 nox11=$NOX11
 copy=$COPY
 ownership=y
